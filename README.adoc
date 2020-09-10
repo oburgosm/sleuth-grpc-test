@@ -36,7 +36,7 @@ mvn spring-boot:run
 
 You can change _spring-cloud-dependencies_ version setting property `spring-cloud-dependencies.version` at 
 root project pom.xml.Trace is good  for _Hoxton.SR2_, but not foe next versions. The difference only occurs if we have
-a subscribeOn on 
+a subscribeOn on `MyController#hello`
 
 
 
