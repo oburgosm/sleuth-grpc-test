@@ -1,0 +1,43 @@
+= Demo for gRPC instrumentation with sleuth
+
+This projects has two modules, `grpc-client` and `grpc-server`
+
+For bothb of them, to see traces on zipkin you should start a zipkin server on port 9411
+
+For example with docker:
+
+----
+docker run -d -p 9411:9411 openzipkin/zipkin
+----
+
+== Modules 
+
+=== grpc-client
+
+A webflux application that publish a reactive endpoint an call grp-server using a reactive grpc client stub
+
+You can run it with:
+
+----
+mvn spring-boot:run
+----
+
+==) grpc-server
+
+You can run it with:
+
+----
+mvn spring-boot:run
+----
+
+== Testing application
+
+`http://localhost:8080/hello/<yourName>`. Then search traces at `http://localhost:9411/zipkin/`
+
+You can change _spring-cloud-dependencies_ version setting property `spring-cloud-dependencies.version` at 
+root project pom.xml.Trace is good  for _Hoxton.SR2_, but not foe next versions. The difference only occurs if we have
+a subscribeOn on 
+
+
+
+

@@ -1,0 +1,15 @@
+app:
+  version: 1
+spring:
+  application:
+    name: grpc-client
+  sleuth:
+    supports-join: false
+    sampler:
+      probability: 1.0
+server:
+  port: 8080
+
+logging:
+  level:
+    root: WARN

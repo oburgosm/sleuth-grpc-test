@@ -1,0 +1,15 @@
+app:
+  version: 1
+spring:
+  application:
+    name: grpc-server
+  sleuth:
+    supports-join: false
+    sampler:
+      probability: 1.0
+logging:
+  level:
+    root: WARN
+
+
+  
