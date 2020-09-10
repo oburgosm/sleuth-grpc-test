@@ -22,7 +22,7 @@ You can run it with:
 mvn spring-boot:run
 ----
 
-==) grpc-server
+=== grpc-server
 
 You can run it with:
 
